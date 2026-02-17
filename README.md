@@ -12,6 +12,9 @@ The app allows users to ask health-related questions and receive:
 
 ⚠️ **This application provides general health information only and is not medical advice.**
 
+![UI Screenshot](https://github.com/KATARIADITHYA/Health-Care-Rag/blob/main/Picture1.jpg)
+
+
 ---
 
 ## ✨ Features
