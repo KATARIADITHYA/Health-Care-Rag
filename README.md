@@ -1,90 +1,47 @@
-# Health-Care-RAG
-🩺 CDC Healthcare RAG Assistant
+# 🩺 Health Information Assistant (CDC RAG)
 
-A Retrieval-Augmented Generation (RAG) system that provides accurate, citation-based health information using official CDC content. The system retrieves relevant CDC documents, reranks them for precision, and generates grounded responses using a Large Language Model (Groq LLaMA).
+This project is a **Streamlit-based health question answering application** that uses:
+- A **ChromaDB vector database** built from CDC health data
+- A **Groq-hosted LLM (LLaMA 3.1)** for answering questions
+- **Retrieval-Augmented Generation (RAG)** to ensure answers come only from CDC sources
 
-⚠️ This system provides general health information only. It is not medical advice.
-![UI Screenshot](https://github.com/KATARIADITHYA/Health-Care-Rag/blob/main/Picture1.jpg)
+The app allows users to ask health-related questions and receive:
+- Clear answers
+- Source citations (Source 1, Source 2, etc.)
+- A health-themed user interface with a background image
 
+⚠️ **This application provides general health information only and is not medical advice.**
 
+---
 
-📌 Project Overview
+## ✨ Features
 
-The CDC Healthcare RAG Assistant is designed to:
+- Ask health-related questions in natural language  
+- Retrieves relevant CDC documents from ChromaDB  
+- Uses Groq LLM to generate answers based only on retrieved context  
+- Displays cited sources for transparency  
+- Health-themed UI with background image  
+- Optional reranking using sentence-transformers  
 
-Retrieve official CDC health content using semantic vector search
+---
 
-Apply metadata filtering for topic-specific results
+## 🛠️ Tech Stack
 
-Rerank retrieved documents using a cross-encoder model
+- Python  
+- Streamlit  
+- ChromaDB  
+- Groq API (OpenAI-compatible)  
+- Sentence Transformers (optional reranker)  
+- dotenv  
 
-Generate grounded answers using Groq LLaMA models
+---
 
-Provide transparent source citations
+## 📂 Project Structure
 
-Prevent hallucination through strict prompt constraints
-
-This project demonstrates production-grade AI system design with explainability and healthcare-safe grounding.
-
-🏗️ System Architecture
-
-User Query
-→ ChromaDB Vector Retrieval
-→ Metadata Filtering
-→ Cross-Encoder Reranking
-→ Prompt Construction
-→ Groq LLaMA Generation
-→ Citation-based Answer
-
-🛠️ Tech Stack
-
-Vector Database: ChromaDB (Persistent Client)
-
-Embedding Model: all-MiniLM-L6-v2
-
-Reranker: Cross-Encoder (ms-marco-MiniLM-L-6-v2)
-
-LLM Backend: Groq (LLaMA 3.1)
-
-UI Framework: Streamlit
-
-Environment Management: python-dotenv
-
-Language: Python 3.12
-
-📂 Project Structure
-
-├── app.py                 # Streamlit UI
-
-├── chroma_db/             # Persistent ChromaDB storage
-
-├── .env                   # API keys 
-
-├── requirements.txt       # Python dependencies
-
-└── README.md
-
-🚀 Installation & Setup
-
-1️⃣ Clone the repository
-git clone <your-repo-url>
-cd <project-folder>
-
-2️⃣ Install dependencies
-pip install -r requirements.txt
-
-
-If needed:
-
-pip install streamlit chromadb sentence-transformers openai python-dotenv
-
-3️⃣ Configure Environment Variables
-
-Create a .env file:
-
-GROQ_API_KEY=***
-
-
-4️⃣ Run the Application
-streamlit run app.py
+```text
+.
+├── app.py          # Main Streamlit application
+├── chroma_db/      # Persistent Chroma vector database (CDC data)
+├── .env            # API key file (not committed)
+└── README.md       # Project documentation
 
