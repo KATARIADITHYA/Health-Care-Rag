@@ -4,6 +4,9 @@
 A Retrieval-Augmented Generation (RAG) system that provides accurate, citation-based health information using official CDC content. The system retrieves relevant CDC documents, reranks them for precision, and generates grounded responses using a Large Language Model (Groq LLaMA).
 
 ⚠️ This system provides general health information only. It is not medical advice.
+![UI Screenshot](https://github.com/KATARIADITHYA/Health-Care-Rag/blob/main/Picture1.jpg)
+
+
 
 📌 Project Overview
 
